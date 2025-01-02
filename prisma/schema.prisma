@@ -11,13 +11,12 @@ datasource db {
 }
 
 model Issue {
-  id          Int      @id @default(autoincrement())
-  title       String   @db.VarChar(255)
-  description String   @db.Text
-  status      Status   @default(OPEN)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+    id          Int      @id @default(autoincrement())
+    title       String
+    description String
+    createdAt   DateTime @default(now())
 }
+
 
 enum Status {
   OPEN
